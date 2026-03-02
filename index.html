@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ForenSolve Experts — Premier forensic science consultancy specializing in crime pattern correlation, forensic analytics, digital evidence analysis, and expert witness services.">
+  <meta name="keywords" content="forensic science, crime analysis, crime pattern correlation, forensic analytics, digital forensics, expert witness">
+  <title>ForenSolve Experts — Forensic Science & Crime Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- Particle Background -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon"><i class="fas fa-microscope"></i></div>
+      <div class="nav-logo-text">Foren<span>Solve</span></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#case-types">Case Types</a>
+      <a href="#modus-operandi">Modus Operandi</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#correlation">Patterns</a>
+      <a href="#team">Team</a>
+      <a href="#contact" class="nav-cta">Get In Touch</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-scanner"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>Forensic Intelligence Platform</span>
+        <span id="liveClock" style="margin-left:8px; font-size:0.75rem; color:#546e7a;"></span>
+      </div>
+      <h1 class="hero-title">
+        Unraveling Truth Through<br>
+        <span class="gradient-text" id="typingText">Forensic Science</span><span style="color:var(--primary);animation:pulse 1s infinite;">|</span>
+      </h1>
+      <p class="hero-subtitle">
+        ForenSolve Experts delivers cutting-edge forensic analysis, crime pattern correlation, and data-driven insights to law enforcement agencies, legal teams, and investigative organizations worldwide.
+      </p>
+      <div class="hero-actions">
+        <a href="#analytics" class="btn btn-primary"><i class="fas fa-chart-line"></i> View Analytics</a>
+        <a href="#services" class="btn btn-outline"><i class="fas fa-flask"></i> Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value" data-count="15400" data-suffix="+">0</div>
+          <div class="hero-stat-label">Cases Solved</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value" data-count="98" data-suffix="%">0</div>
+          <div class="hero-stat-label">Accuracy Rate</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value" data-count="200" data-suffix="+">0</div>
+          <div class="hero-stat-label">Expert Analysts</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value" data-count="42">0</div>
+          <div class="hero-stat-label">Countries Served</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-shield-halved"></i> Who We Are</div>
+      <h2 class="section-title">Pioneering <span>Forensic Excellence</span></h2>
+      <p class="section-desc">
+        Founded in 2008, ForenSolve Experts has grown into a world-renowned forensic consultancy, delivering science-backed evidence analysis and crime pattern intelligence to over 600 agencies across 42 nations.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-dna"></i></div>
+        <div class="card-title">Scientific Rigor</div>
+        <p class="card-text">Every analysis follows ISO 17025 accredited processes, ensuring our findings meet the highest standards for courtroom admissibility and peer review integrity.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-brain"></i></div>
+        <div class="card-title">AI-Enhanced Analysis</div>
+        <p class="card-text">Our proprietary machine learning algorithms process vast datasets to identify hidden crime patterns, predict criminal behavior, and correlate evidence across jurisdictions.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-gavel"></i></div>
+        <div class="card-title">Legal Integration</div>
+        <p class="card-text">Our forensic reports are designed for legal proceedings with detailed chain-of-custody documentation, expert witness testimony support, and cross-examination preparation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-flask"></i> Our Capabilities</div>
+      <h2 class="section-title">Comprehensive <span>Forensic Services</span></h2>
+      <p class="section-desc">From crime scene reconstruction to advanced digital forensics, our multidisciplinary team provides end-to-end investigative support.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-fingerprint"></i></div>
+        <div class="card-title">Fingerprint & Biometric Analysis</div>
+        <p class="card-text">Advanced latent fingerprint processing using AFIS integration, ridge detail analysis, palm print comparison, and biometric cross-referencing with national and international databases.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="card-title">Digital & Cyber Forensics</div>
+        <p class="card-text">Complete digital evidence recovery from computers, mobile devices, cloud storage, and IoT devices. Network intrusion analysis, malware reverse engineering, and cryptocurrency tracing.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-dna"></i></div>
+        <div class="card-title">DNA & Biological Evidence</div>
+        <p class="card-text">STR profiling, touch DNA analysis, mitochondrial DNA sequencing, forensic genealogy, CODIS database searches, and contamination-free biological evidence processing.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-vial"></i></div>
+        <div class="card-title">Toxicology & Chemistry</div>
+        <p class="card-text">Comprehensive drug screening, poison detection, blood alcohol analysis, gunshot residue testing, accelerant identification, and trace chemical analysis using GC-MS and LC-MS/MS.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <div class="card-title">Crime Scene Reconstruction</div>
+        <p class="card-text">3D crime scene scanning, bloodstain pattern analysis, trajectory determination, event sequencing, and comprehensive scene documentation using photogrammetry and LiDAR.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+        <div class="card-title">Document & Handwriting Analysis</div>
+        <p class="card-text">Questioned document examination, handwriting comparison, signature verification, ink dating, paper fiber analysis, and detection of alterations, forgeries, and counterfeits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE TYPES ===== -->
+<section class="section section-alt" id="case-types">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-folder-open"></i> Case Categories</div>
+      <h2 class="section-title">Types of <span>Cases We Handle</span></h2>
+      <p class="section-desc">Our experts have extensive experience across all major categories of criminal and civil forensic investigations.</p>
+    </div>
+    <div class="case-types-grid">
+      <div class="case-type-card reveal">
+        <div class="case-type-header">
+          <div class="case-type-icon homicide"><i class="fas fa-skull-crossbones"></i></div>
+          <div>
+            <div class="case-type-name">Homicide & Violent Crime</div>
+            <div class="case-type-count">2,840+ cases analyzed</div>
+          </div>
+        </div>
+        <div class="case-type-body">
+          <p>Investigation of murders, manslaughter, assault, domestic violence, and serial crimes. Includes autopsy consultation, wound analysis, weapon identification, and reconstruction of violent events.</p>
+          <div class="case-type-tags">
+            <span class="tag">Bloodstain Analysis</span>
+            <span class="tag">Wound Patterns</span>
+            <span class="tag">Weapon ID</span>
+            <span class="tag">Time of Death</span>
+          </div>
+        </div>
+      </div>
+      <div class="case-type-card reveal">
+        <div class="case-type-header">
+          <div class="case-type-icon cyber"><i class="fas fa-shield-virus"></i></div>
+          <div>
+            <div class="case-type-name">Cybercrime & Data Breach</div>
+            <div class="case-type-count">4,200+ cases analyzed</div>
+          </div>
+        </div>
+        <div class="case-type-body">
+          <p>Investigating hacking, data breaches, ransomware attacks, identity theft, online fraud, dark web activity, and corporate espionage. Full digital evidence lifecycle management.</p>
+          <div class="case-type-tags">
+            <span class="tag">Network Forensics</span>
+            <span class="tag">Malware Analysis</span>
+            <span class="tag">Data Recovery</span>
+            <span class="tag">IP Tracing</span>
+          </div>
+        </div>
+      </div>
+      <div class="case-type-card reveal">
+        <div class="case-type-header">
+          <div class="case-type-icon fraud"><i class="fas fa-money-check-dollar"></i></div>
+          <div>
+            <div class="case-type-name">Financial Fraud & White-Collar</div>
+            <div class="case-type-count">3,150+ cases analyzed</div>
+          </div>
+        </div>
+        <div class="case-type-body">
+          <p>Embezzlement, Ponzi schemes, securities fraud, insurance fraud, tax evasion, money laundering, and forgery investigations. Forensic accounting and transaction tracing.</p>
+          <div class="case-type-tags">
+            <span class="tag">Forensic Accounting</span>
+            <span class="tag">Crypto Tracing</span>
+            <span class="tag">Document Forgery</span>
+            <span class="tag">Shell Companies</span>
+          </div>
+        </div>
+      </div>
+      <div class="case-type-card reveal">
+        <div class="case-type-header">
+          <div class="case-type-icon narcotics"><i class="fas fa-pills"></i></div>
+          <div>
+            <div class="case-type-name">Narcotics & Drug Trafficking</div>
+            <div class="case-type-count">2,600+ cases analyzed</div>
+          </div>
+        </div>
+        <div class="case-type-body">
+          <p>Substance identification, drug purity analysis, supply chain mapping, clandestine lab detection, and trafficking network analysis using communications forensics.</p>
+          <div class="case-type-tags">
+            <span class="tag">GC-MS Analysis</span>
+            <span class="tag">Network Mapping</span>
+            <span class="tag">Precursor Tracking</span>
+            <span class="tag">Lab Profiling</span>
+          </div>
+        </div>
+      </div>
+      <div class="case-type-card reveal">
+        <div class="case-type-header">
+          <div class="case-type-icon arson"><i class="fas fa-fire"></i></div>
+          <div>
+            <div class="case-type-name">Arson & Fire Investigation</div>
+            <div class="case-type-count">1,180+ cases analyzed</div>
+          </div>
+        </div>
+        <div class="case-type-body">
+          <p>Fire origin & cause analysis, accelerant detection, electrical fire investigation, insurance fraud arson cases, and explosion forensics with debris analysis.</p>
+          <div class="case-type-tags">
+            <span class="tag">Accelerant Detection</span>
+            <span class="tag">Burn Patterns</span>
+            <span class="tag">Fire Modeling</span>
+            <span class="tag">Debris Analysis</span>
+          </div>
+        </div>
+      </div>
+      <div class="case-type-card reveal">
+        <div class="case-type-header">
+          <div class="case-type-icon forensic"><i class="fas fa-user-secret"></i></div>
+          <div>
+            <div class="case-type-name">Cold Cases & Missing Persons</div>
+            <div class="case-type-count">980+ cases analyzed</div>
+          </div>
+        </div>
+        <div class="case-type-body">
+          <p>Re-examination of cold cases using modern forensic technology, forensic genealogy, victim identification through skeletal remains analysis, facial reconstruction, and isotope analysis.</p>
+          <div class="case-type-tags">
+            <span class="tag">Genealogy</span>
+            <span class="tag">Facial Recon</span>
+            <span class="tag">Isotope Analysis</span>
+            <span class="tag">Evidence Review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODUS OPERANDI ===== -->
+<section class="section" id="modus-operandi">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-crosshairs"></i> Criminal Behavior</div>
+      <h2 class="section-title">Modus Operandi <span>Analysis</span></h2>
+      <p class="section-desc">Understanding how criminals operate is key to prevention. We analyze and classify criminal methodologies across multiple dimensions.</p>
+    </div>
+    <div class="mo-timeline">
+      <div class="mo-item reveal">
+        <div class="mo-dot"></div>
+        <div class="mo-content">
+          <div class="mo-label">MO Category 01</div>
+          <h3 class="mo-title">Premeditated & Planned Operations</h3>
+          <p class="mo-desc">Highly organized crimes involving extensive planning, surveillance, and preparation. Includes targeted assassinations, sophisticated heists, and calculated corporate fraud. Perpetrators often demonstrate high intelligence and counter-forensic awareness.</p>
+          <div class="mo-indicators">
+            <span class="mo-indicator high">High Risk</span>
+            <span class="mo-indicator medium">Low Detection Rate</span>
+          </div>
+        </div>
+        <div style="flex:1;"></div>
+      </div>
+      <div class="mo-item reveal">
+        <div class="mo-dot"></div>
+        <div style="flex:1;"></div>
+        <div class="mo-content">
+          <div class="mo-label">MO Category 02</div>
+          <h3 class="mo-title">Opportunistic & Impulse Crimes</h3>
+          <p class="mo-desc">Crimes committed without prior planning, triggered by opportunity or emotional impulse. Includes crimes of passion, spontaneous theft, and road rage incidents. Often leaving more forensic evidence due to lack of preparation.</p>
+          <div class="mo-indicators">
+            <span class="mo-indicator medium">Medium Risk</span>
+            <span class="mo-indicator low">High Evidence Trail</span>
+          </div>
+        </div>
+      </div>
+      <div class="mo-item reveal">
+        <div class="mo-dot"></div>
+        <div class="mo-content">
+          <div class="mo-label">MO Category 03</div>
+          <h3 class="mo-title">Serial & Repeat Offenders</h3>
+          <p class="mo-desc">Patterns of repeated criminal behavior with evolving sophistication. Includes serial killers, repeat sexual offenders, and habitual burglars. Behavioral analysis and geographic profiling are key tools for identification.</p>
+          <div class="mo-indicators">
+            <span class="mo-indicator high">Critical Risk</span>
+            <span class="mo-indicator medium">Pattern-Based</span>
+          </div>
+        </div>
+        <div style="flex:1;"></div>
+      </div>
+      <div class="mo-item reveal">
+        <div class="mo-dot"></div>
+        <div style="flex:1;"></div>
+        <div class="mo-content">
+          <div class="mo-label">MO Category 04</div>
+          <h3 class="mo-title">Technology-Enabled Crimes</h3>
+          <p class="mo-desc">Criminal operations leveraging advanced technology — ransomware deployment, deepfake manipulation, AI-powered phishing, SIM swapping, cryptocurrency mixing laundering, and IoT device exploitation for surveillance or sabotage.</p>
+          <div class="mo-indicators">
+            <span class="mo-indicator high">Rapidly Evolving</span>
+            <span class="mo-indicator high">High Complexity</span>
+          </div>
+        </div>
+      </div>
+      <div class="mo-item reveal">
+        <div class="mo-dot"></div>
+        <div class="mo-content">
+          <div class="mo-label">MO Category 05</div>
+          <h3 class="mo-title">Organized Crime Syndicates</h3>
+          <p class="mo-desc">Hierarchically structured criminal networks engaged in drug trafficking, arms dealing, human trafficking, and extortion. These organizations employ counter-intelligence tactics, encrypted communications, and compartmentalized cell structures.</p>
+          <div class="mo-indicators">
+            <span class="mo-indicator high">Multi-Jurisdictional</span>
+            <span class="mo-indicator medium">Network Analysis</span>
+          </div>
+        </div>
+        <div style="flex:1;"></div>
+      </div>
+      <div class="mo-item reveal">
+        <div class="mo-dot"></div>
+        <div style="flex:1;"></div>
+        <div class="mo-content">
+          <div class="mo-label">MO Category 06</div>
+          <h3 class="mo-title">Insider Threat & Espionage</h3>
+          <p class="mo-desc">Trusted individuals exploiting privileged access for sabotage, data theft, or espionage. Includes corporate insiders, government employees, and embedded agents. Behavioral analytics and access pattern monitoring are primary detection methods.</p>
+          <div class="mo-indicators">
+            <span class="mo-indicator high">Hard to Detect</span>
+            <span class="mo-indicator low">Access-Based</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ANALYTICS DASHBOARD ===== -->
+<section class="section section-alt" id="analytics">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-chart-bar"></i> Data Intelligence</div>
+      <h2 class="section-title">Crime <span>Analytics Dashboard</span></h2>
+      <p class="section-desc">Real-time forensic analytics powered by our proprietary crime intelligence engine, processing data from thousands of cases globally.</p>
+    </div>
+
+    <!-- Stat Cards -->
+    <div class="analytics-grid reveal">
+      <div class="analytics-stat">
+        <div class="analytics-stat-icon">🔬</div>
+        <div class="analytics-stat-value cyan" data-count="15420" data-suffix="+">0</div>
+        <div class="analytics-stat-label">Total Cases Analyzed</div>
+      </div>
+      <div class="analytics-stat">
+        <div class="analytics-stat-icon">✅</div>
+        <div class="analytics-stat-value green" data-count="94" data-suffix="%">0</div>
+        <div class="analytics-stat-label">Resolution Rate</div>
+      </div>
+      <div class="analytics-stat">
+        <div class="analytics-stat-icon">⚡</div>
+        <div class="analytics-stat-value orange" data-count="48" data-suffix="hrs">0</div>
+        <div class="analytics-stat-label">Avg. Turnaround</div>
+      </div>
+      <div class="analytics-stat">
+        <div class="analytics-stat-icon">🌐</div>
+        <div class="analytics-stat-value yellow" data-count="42">0</div>
+        <div class="analytics-stat-label">Countries Coverage</div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-grid reveal">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h3 class="chart-card-title"><i class="fas fa-chart-line" style="color:var(--primary);margin-right:8px;"></i>Crime Trend Analysis</h3>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="crimeTrendChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h3 class="chart-card-title"><i class="fas fa-chart-pie" style="color:var(--primary);margin-right:8px;"></i>Case Distribution</h3>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="caseDistChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h3 class="chart-card-title"><i class="fas fa-chart-column" style="color:var(--primary);margin-right:8px;"></i>Case Resolution by Year</h3>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="resolutionChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h3 class="chart-card-title"><i class="fas fa-spider" style="color:var(--primary);margin-right:8px;"></i>Modus Operandi Radar</h3>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="moRadarChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CRIME PATTERN CORRELATION ===== -->
+<section class="section" id="correlation">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-project-diagram"></i> Pattern Intelligence</div>
+      <h2 class="section-title">Crime Pattern <span>Correlation</span></h2>
+      <p class="section-desc">Our AI engine identifies hidden correlations between crime types, timing, geography, and modus operandi to predict and prevent criminal activity.</p>
+    </div>
+
+    <div class="correlation-wrap reveal">
+      <!-- Heatmap -->
+      <div class="pattern-card">
+        <div class="pattern-header">
+          <i class="fas fa-th"></i>
+          <h3>Crime Frequency Heatmap</h3>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">Incident density by hour and day of week — darker cells indicate higher criminal activity.</p>
+        <div class="heatmap-grid" id="crimeHeatmap"></div>
+      </div>
+
+      <!-- Correlation Matrix -->
+      <div class="pattern-card">
+        <div class="pattern-header">
+          <i class="fas fa-network-wired"></i>
+          <h3>Crime Type Correlation Matrix</h3>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">Cross-correlation coefficients between different crime categories — higher values indicate stronger relationships.</p>
+        <div class="correlation-matrix" id="correlationMatrix"></div>
+      </div>
+    </div>
+
+    <!-- Crime Hotspots -->
+    <div class="pattern-card reveal" style="max-width:900px;margin:0 auto;">
+      <div class="pattern-header">
+        <i class="fas fa-map-pin"></i>
+        <h3>Top Crime Hotspot Zones</h3>
+      </div>
+      <div class="hotspot-list">
+        <div class="hotspot-item">
+          <div class="hotspot-rank">#1</div>
+          <div class="hotspot-info">
+            <div class="hotspot-name">Metro District Central</div>
+            <div class="hotspot-meta">1,240 incidents · Cybercrime + Fraud dominant</div>
+          </div>
+          <div class="hotspot-bar-wrap"><div class="hotspot-bar" data-width="95"></div></div>
+        </div>
+        <div class="hotspot-item">
+          <div class="hotspot-rank">#2</div>
+          <div class="hotspot-info">
+            <div class="hotspot-name">Industrial Corridor East</div>
+            <div class="hotspot-meta">980 incidents · Narcotics + Arson dominant</div>
+          </div>
+          <div class="hotspot-bar-wrap"><div class="hotspot-bar" data-width="78"></div></div>
+        </div>
+        <div class="hotspot-item">
+          <div class="hotspot-rank">#3</div>
+          <div class="hotspot-info">
+            <div class="hotspot-name">Harbor Zone South</div>
+            <div class="hotspot-meta">845 incidents · Trafficking + Smuggling dominant</div>
+          </div>
+          <div class="hotspot-bar-wrap"><div class="hotspot-bar" data-width="68"></div></div>
+        </div>
+        <div class="hotspot-item">
+          <div class="hotspot-rank">#4</div>
+          <div class="hotspot-info">
+            <div class="hotspot-name">Residential Suburbs North</div>
+            <div class="hotspot-meta">620 incidents · Burglary + Domestic dominant</div>
+          </div>
+          <div class="hotspot-bar-wrap"><div class="hotspot-bar" data-width="50"></div></div>
+        </div>
+        <div class="hotspot-item">
+          <div class="hotspot-rank">#5</div>
+          <div class="hotspot-info">
+            <div class="hotspot-name">Financial District West</div>
+            <div class="hotspot-meta">510 incidents · White-collar + Identity theft</div>
+          </div>
+          <div class="hotspot-bar-wrap"><div class="hotspot-bar" data-width="41"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="section section-alt" id="team">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-users"></i> Our Experts</div>
+      <h2 class="section-title">Meet the <span>ForenSolve Team</span></h2>
+      <p class="section-desc">Our multidisciplinary team brings decades of combined experience in forensic science, law enforcement, and academic research.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar">DR</div>
+        <div class="team-name">Dr. Rachel Winters</div>
+        <div class="team-role">Chief Forensic Scientist</div>
+        <p class="team-bio">Ph.D. in Forensic Chemistry from MIT. 22 years of experience in trace evidence analysis and crime lab management. Published 50+ peer-reviewed papers.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">JM</div>
+        <div class="team-name">James Mitchell</div>
+        <div class="team-role">Digital Forensics Lead</div>
+        <p class="team-bio">Former FBI Cyber Division specialist. Expert in network intrusion forensics, mobile device extraction, and cryptocurrency investigation. CFCE & EnCE certified.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">SP</div>
+        <div class="team-name">Dr. Sarah Patel</div>
+        <div class="team-role">Crime Analytics Director</div>
+        <p class="team-bio">Ph.D. in Criminal Justice from Cambridge. Specializes in predictive policing algorithms, spatial crime analysis, and criminal network modeling.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">MK</div>
+        <div class="team-name">Marcus Kowalski</div>
+        <div class="team-role">Forensic Pathologist</div>
+        <p class="team-bio">Board-certified forensic pathologist with 18 years of autopsy experience. Expert witness in over 300 homicide trials. Specialist in wound ballistics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-quote-right"></i> Trusted By</div>
+      <h2 class="section-title">Client <span>Testimonials</span></h2>
+      <p class="section-desc">Hear from the law enforcement agencies, legal teams, and organizations that trust ForenSolve Experts.</p>
+    </div>
+    <div class="testimonials-slider reveal">
+      <div class="testimonial-card">
+        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+        <p class="testimonial-text">"ForenSolve's crime pattern analysis was instrumental in connecting three cold cases spanning 15 years. Their AI-driven correlation engine identified links our team had missed entirely."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">DH</div>
+          <div>
+            <div class="testimonial-name">Det. David Harris</div>
+            <div class="testimonial-org">NYPD Major Crimes Division</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+        <p class="testimonial-text">"Their digital forensics team recovered critical evidence from encrypted devices that proved pivotal in our corporate espionage prosecution. Exceptional technical capability and courtroom poise."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">LS</div>
+          <div>
+            <div class="testimonial-name">Laura Stevens, Esq.</div>
+            <div class="testimonial-org">Sterling & Associates Law Firm</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+        <p class="testimonial-text">"The predictive analytics dashboard has transformed how our department allocates resources. Crime incidents in targeted areas dropped 34% within the first quarter of implementation."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RC</div>
+          <div>
+            <div class="testimonial-name">Chief Robert Chen</div>
+            <div class="testimonial-org">Metro Police Department</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-badge"><i class="fas fa-envelope"></i> Get In Touch</div>
+      <h2 class="section-title">Contact <span>ForenSolve Experts</span></h2>
+      <p class="section-desc">Need forensic consultation? Reach out to our team for case inquiries, partnership opportunities, or expert witness requests.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fas fa-building"></i></div>
+          <div>
+            <div class="contact-label">Headquarters</div>
+            <div class="contact-value">ForenSolve Experts Inc.<br>1247 Forensic Boulevard, Suite 800<br>Washington, D.C. 20001, USA</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-label">24/7 Hotline</div>
+            <div class="contact-value">+1 (800) 555-FOREN<br>Emergency: +1 (800) 555-0911</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">inquiries@forensolve.com<br>cases@forensolve.com</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="contact-label">Working Hours</div>
+            <div class="contact-value">24/7 Emergency Response<br>Office: Mon-Fri 8:00 AM - 6:00 PM EST</div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Full Name</label>
+            <input class="form-input" type="text" id="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" type="email" id="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="caseType">Case Type</label>
+            <select class="form-input" id="caseType">
+              <option value="">Select case type...</option>
+              <option>Homicide Investigation</option>
+              <option>Cybercrime / Data Breach</option>
+              <option>Financial Fraud</option>
+              <option>Narcotics / Drug Trafficking</option>
+              <option>Arson / Fire Investigation</option>
+              <option>Cold Case Review</option>
+              <option>Expert Witness Request</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Case Details</label>
+          <textarea class="form-textarea" id="message" placeholder="Describe your forensic consultation needs, case background, and any specific requirements..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+          <i class="fas fa-paper-plane"></i> Submit Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo" style="margin-bottom:4px;">
+          <div class="nav-logo-icon"><i class="fas fa-microscope"></i></div>
+          <div class="nav-logo-text">Foren<span>Solve</span></div>
+        </div>
+        <p class="footer-brand-desc">Pioneering forensic science solutions since 2008. We combine cutting-edge technology with decades of investigative expertise to deliver justice through science.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">DNA Analysis</a></li>
+          <li><a href="#services">Digital Forensics</a></li>
+          <li><a href="#services">Crime Scene Recon</a></li>
+          <li><a href="#services">Toxicology</a></li>
+          <li><a href="#services">Document Analysis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#analytics">Analytics Dashboard</a></li>
+          <li><a href="#case-types">Case Categories</a></li>
+          <li><a href="#modus-operandi">Modus Operandi</a></li>
+          <li><a href="#correlation">Crime Patterns</a></li>
+          <li><a href="#team">Our Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Confidentiality</a></li>
+          <li><a href="#">Accreditations</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 ForenSolve Experts Inc. All rights reserved. ISO 17025 Accredited Laboratory.</div>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="footer-social" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="footer-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="footer-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
