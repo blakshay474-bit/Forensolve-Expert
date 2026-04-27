@@ -1248,3 +1248,45 @@ ul { list-style: none; }
   .heatmap-grid { grid-template-columns: repeat(4, 1fr); }
   .correlation-matrix { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* === Embedded Chatbot Section === */
+.chatbot-embed-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card), 0 0 40px rgba(0, 229, 255, 0.08);
+  transition: var(--transition);
+  position: relative;
+}
+
+.chatbot-embed-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  z-index: 1;
+}
+
+.chatbot-embed-wrapper:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-card), 0 0 60px rgba(0, 229, 255, 0.12);
+}
+
+#voiceflow-chat-container {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #voiceflow-chat-container {
+    min-height: 450px;
+  }
+  .chatbot-embed-wrapper {
+    border-radius: 14px;
+  }
+}
